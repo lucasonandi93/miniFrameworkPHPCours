@@ -29,17 +29,18 @@ class EvenNumberController extends Controller
         return $evenNumbers;
     }
 
+
     public function isEven(){
-            $number = $_POST['number'];
+        $number = $_POST['number'];
 
-            $message = '';
-            $isEven = ($number % 2 === 0);
+        $message = '';
+        $isEven = ($number % 2 === 0);
 
-            if ($isEven) {
-                $message = "<p style='color: green;'>Le nombre $number est pair</p>";
-            } else {
-                $message = "<p style='color: red;'>Le nombre $number n'est pas pair</p>";
-            }
+        if ($isEven) {
+            $message = "<p style='color: green;'>Le nombre $number est pair</p>";
+        } else {
+            $message = "<p style='color: red;'>Le nombre $number n'est pas pair</p>";
+        }
 
         return $this->view('Home', ['message'=>$message]
         );

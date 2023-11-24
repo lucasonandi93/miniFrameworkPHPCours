@@ -45,28 +45,31 @@ class Route
 
                 }
 
-                    if (is_array($callback)) {
+                if (is_array($callback)) {
 
-                        $controller = new $callback[0];
+                    $controller = new $callback[0];
 
-                        $response = $controller->{$callback[1]}(...$params);
-                    }
+                    $response = $controller->{$callback[1]}(...$params);
+                }
 
-                    if (is_array($response) || is_object($response)) {
-                        header('Content-Type: application/json');
+                if (is_array($response) || is_object($response)) {
+                    header('Content-Type: application/json');
 
-                        echo json_encode($response);
+                    echo json_encode($response);
 
-                    } else {
+                } else {
 
-                        echo $response;
+                    echo $response;
 
-                    }
+                }
 
-                    return;
+                return;
             }
         }
         http_response_code(404);
-        echo '404 Not Found';
+        header('Content-Type: text/html');
+        echo '<h1>404 Not Found</h1>';
+        echo '<p>La ressource demandée n\'existe pas.</p>';
+        echo '<p><a href="/">Retour à l\'accueil</a></p>';
     }
 }
