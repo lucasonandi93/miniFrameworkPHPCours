@@ -22,3 +22,4 @@ Faire un mini framework MVC en vanilla PHP. Le framework doit respecter l’arch
 ### Remarque :
 Le point 5 n'est pas correctement réalisé.
 Il est possible de passer les valeurs de démarrage et de quantité par l'URL `/even-numbers/"valeur-de-start-at"/"valeur-de-quantity"` par exemple : `/even-numbers/2/10` affichera les 10 premiers nombres pairs en commençant à partir de 2.
+Pour la valeur de 'start-at', l'application n'accepte que des valeurs paires ; sinon, elle affichera une erreur de valeur invalide.
