@@ -16,12 +16,11 @@ Route::get('/variable/:change', function($change){
 });
 Route::get('/random', [RandomNumberController::class, 'index']);
 
-Route::get('/even', [EvenNumberController::class, 'listEvenNumbers']);
+Route::get('/even-numbers', [EvenNumberController::class, 'listEvenNumbers']);
 
-Route::get('/even/:startAt/:quantity', [EvenNumberController::class, 'listEvenNumbers']);
+Route::get('/even-numbers/:startAt/:quantity', [EvenNumberController::class, 'listEvenNumbers']);
 
-
-Route::post('/even', [EvenNumberController::class, 'isEven']);
+Route::post('/even-numbers', [EvenNumberController::class, 'isEven']);
 
 
 

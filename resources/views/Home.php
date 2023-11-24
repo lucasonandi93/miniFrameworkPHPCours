@@ -12,8 +12,8 @@
 <nav>
     <ul>
         <li><a href="/">Accueil</a></li>
-        <li><a href="/random">Nombre aléatoire</a></li>
-        <li><a href="/even">Nombres pairs</a></li>
+        <li><a href="/random-number">Nombre aléatoire</a></li>
+        <li><a href="/even-numbers/0/10">Nombres pairs</a></li>
     </ul>
 </nav>
 

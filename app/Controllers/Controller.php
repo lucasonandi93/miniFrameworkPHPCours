@@ -20,7 +20,7 @@ class Controller
             return $content;
         }else{
 
-            return "el archivo no existe";
+            return "Le fichier ". $content . " n'existe pas.";
         }
     }
 }
